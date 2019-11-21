@@ -1,16 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Mister Cocktail</h1>
-    <p>Make a fuckin cocktail, what do I care</p>
-  </div>
-</div>
-
 <table>
   <% @cocktails.each do |cocktail| %>
-  <tr>
-    <td><%= link_to cocktail.name,  cocktail_path(cocktail) %></td>
-    <td><%= link_to 'Edit', edit_cocktail_path(cocktail) %></td>
-  </tr>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <h2><%= link_to cocktail.name,  cocktail_path(cocktail) %></h2>
+    <div id="options">
+      <p><%= link_to 'Edit', edit_cocktail_path(cocktail) %></p>
+    </div>
+  </div>
   <% end %>
-  <tr><%= link_to 'New Cocktail', new_cocktail_path %></tr>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <h2><%= link_to 'New Cocktail', new_cocktail_path %></h2>
+  </div>
 </table>

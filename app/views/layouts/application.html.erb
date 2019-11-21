@@ -13,7 +13,22 @@
 </head>
 
 <body>
-  <%= yield %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <div class="container">
+      <h1>Dank Dranks</h1>
+      <p>Make a fuckin cocktail, what do I care</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cards">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div class="footer">
+
+  </div>
 
   <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
   <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
